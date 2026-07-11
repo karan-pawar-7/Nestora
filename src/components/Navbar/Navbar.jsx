@@ -8,14 +8,14 @@ const Navbar = () => {
 
   const navLinks = [
     { name: "Home", path: "/" },
-    { name: "Browse Rooms", path: "/browse" },
+    { name: "Browse Rooms", path: "/browserooms" },
     { name: "About", path: "/about" },
     { name: "Contact", path: "/contact" },
   ];
 
   return (
     <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-md shadow-sm">
-      <nav className="max-w-7xl mx-auto py-4 flex items-center justify-between">
+      <nav className="max-w-7xl py-4 mx-auto flex  items-center justify-between">
 
         {/* Logo */}
         <NavLink
@@ -47,7 +47,7 @@ const Navbar = () => {
         </ul>
 
         {/* Buttons */}
-        <div className="hidden lg:flex items-center gap-4">
+        <div className="hidden lg:flex items-center gap-5">
           <NavLink
             to="/login"
             className="font-medium text-gray-700 hover:text-blue-600"
