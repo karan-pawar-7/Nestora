@@ -6,8 +6,12 @@ const Home = () => {
         <>
             <section
                 className="h-120 bg-cover bg-center"
-                style={{ backgroundImage: "url('/h1.png')" }}
+
+                style={{
+                    backgroundImage: `url(${import.meta.env.BASE_URL}h1.png)`,
+                }}
             >
+
 
                 {/* Content */}
                 <div className="flex pt-15 justify-center max-w-7xl mx-auto min-h-screen">
@@ -93,42 +97,42 @@ const Home = () => {
                     </div>
                     <div className="flex gap-6 py-5 px-12 justify-center">
                         <div className=" h-full w-fit shadow-2xl rounded-b-2xl">
-                            <img className="h-35 w-auto rounded-t-2xl" src="./c1.png" alt="" />
+                            <img className="h-35 w-auto rounded-t-2xl" src={`${import.meta.env.BASE_URL}c1.png`} />
                             <div className="p-3">
                                 <h1 className="font-bold">Pune</h1>
                                 <h1>1200+ Rooms</h1>
                             </div>
                         </div>
                         <div className=" h-full w-fit shadow-2xl rounded-b-2xl">
-                            <img className="h-35 w-auto rounded-t-2xl" src="./c2.png" alt="" />
+                            <img className="h-35 w-auto rounded-t-2xl" src={`${import.meta.env.BASE_URL}c2.png`} />
                             <div className="p-3">
                                 <h1 className="font-bold">Mumbai</h1>
                                 <h1>1500+ Rooms</h1>
                             </div>
                         </div>
                         <div className=" h-full w-fit shadow-2xl rounded-b-2xl">
-                            <img className="h-35 w-auto rounded-t-2xl" src="./c3.png" alt="" />
+                            <img className="h-35 w-auto rounded-t-2xl" src={`${import.meta.env.BASE_URL}c3.png`} />
                             <div className="p-3">
                                 <h1 className="font-bold">Nagpur</h1>
                                 <h1>1000+ Rooms</h1>
                             </div>
                         </div>
                         <div className=" h-full w-fit shadow-2xl rounded-b-2xl">
-                            <img className="h-35 w-auto rounded-t-2xl" src="./c4.png" alt="" />
+                            <img className="h-35 w-auto rounded-t-2xl" src={`${import.meta.env.BASE_URL}c4.png`} />
                             <div className="p-3">
                                 <h1 className="font-bold">Nashik</h1>
                                 <h1>850+ Rooms</h1>
                             </div>
                         </div>
                         <div className=" h-full w-fit shadow-2xl rounded-b-2xl">
-                            <img className="h-35 w-auto rounded-t-2xl" src="./c5.png" alt="" />
+                            <img className="h-35 w-auto rounded-t-2xl" src={`${import.meta.env.BASE_URL}c5.png`} />
                             <div className="p-3">
                                 <h1 className="font-bold">Agra</h1>
                                 <h1>500+ Rooms</h1>
                             </div>
                         </div>
                         <div className=" h-full w-fit shadow-2xl rounded-b-2xl">
-                            <img className="h-35 w-auto rounded-t-2xl" src="./c6.png" alt="" />
+                            <img className="h-35 w-auto rounded-t-2xl" src={`${import.meta.env.BASE_URL}c6.png`} />
                             <div className="p-3">
                                 <h1 className="font-bold">Kolhpura</h1>
                                 <h1>400+ Rooms</h1>
@@ -145,7 +149,8 @@ const Home = () => {
                     <div className="flex gap-8 py-5 items-center justify-center">
                         <div className=" h-full w-fit shadow-2xl rounded-b-2xl">
                             <div className="relative  h-35 w-auto">
-                            <img className="w-full h-full object-cover rounded-t-2xl relative bg-cover" src="./r1.png" alt="" />
+                                <img className="w-full h-full object-cover rounded-t-2xl relative bg-cover" src={`${import.meta.env.BASE_URL}r1.png`} alt="" />
+
                             </div>
                             <div className="p-3">
                                 <h1 className="font-bold">1 BHK Flat</h1>
@@ -156,8 +161,8 @@ const Home = () => {
                                 </div>
                             </div>
                         </div>
-                         <div className=" h-full w-fit shadow-2xl rounded-b-2xl">
-                            <img className="h-35 w-auto rounded-t-2xl" src="./r5.png" alt="" />
+                        <div className=" h-full w-fit shadow-2xl rounded-b-2xl">
+                            <img className="h-35 w-auto rounded-t-2xl" src={`${import.meta.env.BASE_URL}r2.png`} alt="" />
                             <div className="p-3">
                                 <h1 className="font-bold">Single Room</h1>
                                 <h1>Koregaon Park, Pune</h1>
@@ -168,7 +173,7 @@ const Home = () => {
                             </div>
                         </div>
                         <div className=" h-full w-fit shadow-2xl rounded-b-2xl">
-                            <img className="h-35 w-auto rounded-t-2xl" src="./r2.png" alt="" />
+                            <img className="h-35 w-auto rounded-t-2xl" src={`${import.meta.env.BASE_URL}r3.png`} alt="" />
                             <div className="p-3">
                                 <h1 className="font-bold">2 BHK Flat</h1>
                                 <h1>Viman Nagar, Pune</h1>
@@ -179,7 +184,7 @@ const Home = () => {
                             </div>
                         </div>
                         <div className=" h-full w-fit shadow-2xl rounded-b-2xl">
-                            <img className="h-35 w-auto rounded-t-2xl" src="./r3.png" alt="" />
+                            <img className="h-35 w-auto rounded-t-2xl" src={`${import.meta.env.BASE_URL}r4.png`} alt="" />
                             <div className="p-3">
                                 <h1 className="font-bold">1 RK Studio</h1>
                                 <h1>Wakad, Pune</h1>
@@ -190,7 +195,7 @@ const Home = () => {
                             </div>
                         </div>
                         <div className=" h-full w-fit shadow-2xl rounded-b-2xl">
-                            <img className="h-35 w-auto rounded-t-2xl" src="./r4.png" alt="" />
+                            <img className="h-35 w-auto rounded-t-2xl" src={`${import.meta.env.BASE_URL}r5.png`} alt="" />
                             <div className="p-3">
                                 <h1 className="font-bold">Shared Room</h1>
                                 <h1>Baner, Pune</h1>
