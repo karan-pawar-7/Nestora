@@ -1,4 +1,5 @@
 import { FaSearch, FaMapMarkerAlt } from "react-icons/fa";
+import React from 'react'
 
 const Home = () => {
     return (
@@ -148,13 +149,13 @@ const Home = () => {
                         <h1 className="text-blue-400">View All</h1>
                     </div>
                     <div className="flex gap-8 py-5 items-center justify-center">
-                       <div className=" h-full w-fit shadow-2xl rounded-b-2xl hover:-translate-y-2 hover:shadow-2xl duration-300 group-hover:scale-110">
+                        <div className=" h-full w-fit shadow-2xl rounded-b-2xl hover:-translate-y-2 hover:shadow-2xl duration-300 group-hover:scale-110">
                             <img className="h-36 w-auto rounded-t-2xl" src={`${import.meta.env.BASE_URL}r1.png`} alt="" />
                             <div className="p-3">
                                 <h1 className="font-bold">Single Room</h1>
                                 <h1>Hinjewadi, Pune</h1>
                                 <div className="flex items-end gap-1">
-                                    <h1 className="text-[20px] text-blue-400 font-bold">9000 </h1>
+                                    <h1 className="text-[20px] text-blue-400 font-bold">₹9000 </h1>
                                     <h1> /month</h1>
                                 </div>
                             </div>
@@ -165,7 +166,7 @@ const Home = () => {
                                 <h1 className="font-bold">Single Room</h1>
                                 <h1>Koregaon Park, Pune</h1>
                                 <div className="flex items-end gap-1">
-                                    <h1 className="text-[20px] text-blue-400 font-bold">3000 </h1>
+                                    <h1 className="text-[20px] text-blue-400 font-bold">₹3000 </h1>
                                     <h1> /month</h1>
                                 </div>
                             </div>
@@ -176,18 +177,18 @@ const Home = () => {
                                 <h1 className="font-bold">2 BHK Flat</h1>
                                 <h1>Viman Nagar, Pune</h1>
                                 <div className="flex items-end gap-1">
-                                    <h1 className="text-[20px] text-blue-400 font-bold">15000 </h1>
+                                    <h1 className="text-[20px] text-blue-400 font-bold">₹15000 </h1>
                                     <h1> /month</h1>
                                 </div>
                             </div>
-                        </div> 
+                        </div>
                         <div className=" h-full w-fit shadow-2xl rounded-b-2xl hover:-translate-y-2 hover:shadow-2xl duration-300 group-hover:scale-110">
                             <img className="h-36 w-auto rounded-t-2xl" src={`${import.meta.env.BASE_URL}r4.png`} alt="" />
                             <div className="p-3">
                                 <h1 className="font-bold">1 RK Studio</h1>
                                 <h1>Wakad, Pune</h1>
                                 <div className="flex items-end gap-1">
-                                    <h1 className="text-[20px] text-blue-400 font-bold">5500 </h1>
+                                    <h1 className="text-[20px] text-blue-400 font-bold">₹5500 </h1>
                                     <h1> /month</h1>
                                 </div>
                             </div>
@@ -198,7 +199,7 @@ const Home = () => {
                                 <h1 className="font-bold">Shared Room</h1>
                                 <h1>Baner, Pune</h1>
                                 <div className="flex items-end gap-1">
-                                    <h1 className="text-[20px] text-blue-400 font-bold">2500 </h1>
+                                    <h1 className="text-[20px] text-blue-400 font-bold">₹2500 </h1>
                                     <h1> /month</h1>
                                 </div>
                             </div>
