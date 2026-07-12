@@ -46,6 +46,7 @@ const Home = () => {
 
                                 <select className="border rounded-xl p-3">
                                     <option>Budget</option>
+                                    <option>₹1000 - ₹3000</option>
                                     <option>₹3000 - ₹5000</option>
                                     <option>₹5000 - ₹8000</option>
                                     <option>₹8000+</option>
@@ -56,6 +57,7 @@ const Home = () => {
                                     <option>Single Room</option>
                                     <option>Double Sharing</option>
                                     <option>1 BHK</option>
+                                    <option>2 BHK</option>
                                 </select>
 
                                 <button className="bg-blue-600 hover:bg-blue-700 text-white rounded-xl flex items-center justify-center gap-2 font-semibold">

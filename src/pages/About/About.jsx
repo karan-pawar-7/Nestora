@@ -27,6 +27,12 @@ import {
   faStar
 } from "@fortawesome/free-solid-svg-icons";
 
+import {
+  faGithub,
+  faXTwitter,
+  faInstagram,
+} from "@fortawesome/free-brands-svg-icons";
+
 const About = () => {
   return (
     <>
@@ -249,6 +255,86 @@ const About = () => {
 
         </div>
       </section>
+
+
+      <section className='mb-5'>
+        <div className='flex flex-col items-center mt-10 mb-5'>
+          <p className='text-blue-700 font-semibold'>OUR TEAM</p>
+          <h1 className='text-[25px] font-semibold'>Meet The Team Behind Nestora</h1>
+        </div>
+        <div className='grid items-center justify-center'>
+          <div className='flex items-center gap-2 shadow-2xl rounded-md'>
+            <div>
+              <img className="h-36 w-auto rounded" src={`${import.meta.env.BASE_URL}karan.jpg`} />
+            </div>
+            <div className='p-2'>
+              <h1 className='font-semibold'>Karan Pawar</h1>
+              <p>Founder & CEO</p>
+              <div className='flex gap-2 mt-5'>
+                <a
+                  href="https://github.com/karan-pawar-7"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-gray-400 duration-300 text-[20px]"
+                >
+                  <FontAwesomeIcon icon={faGithub} />
+                </a>
+                <a
+                  href="https://x.com/yourusername"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-blue-500 duration-300 text-[20px]"
+                >
+                  <FontAwesomeIcon icon={faXTwitter} />
+                </a>
+                <a
+                  href="https://instagram.com/karan_pawar___07"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-pink-500 duration-300 text-[20px]"
+                >
+                  <FontAwesomeIcon icon={faInstagram} />
+                </a>
+              </div>
+             
+            </div>
+          </div>
+        </div>
+      </section>
+
+       <div
+        className="relative h-[200px]  rounded-2xl mb-13 mt-10 overflow-hidden bg-cover bg-center mx-20"
+        style={{
+          backgroundImage: `url(${import.meta.env.BASE_URL}a3.png)`,
+        }}
+      >
+        {/* Blue Overlay */}
+        <div className="absolute inset-0 "></div>
+
+        {/* Content */}
+        <div className="relative z-10 h-full flex items-center justify-center px-12">
+          <div className="max-w-xl text-white">
+            <h1 className="text-[36px] font-bold">
+             Ready to Find Your Perfect Room?
+            </h1>
+            <p className='flex items-center justify-center'>
+              Browse hundereds of verified listings today.
+            </p>
+             <div className='flex gap-10 mt-6 items-center justify-center'>
+              
+              <button className="bg-white hover:bg-blue-700 text-blue-700 rounded-md flex items-center justify-center gap-2 font-semibold h-10 p-3">
+                <FaSearch />
+                Browese Rooms
+              </button>
+              <button className="bg-blue-600 hover:bg-blue-700 text-white rounded-md flex items-center justify-center gap-2 font-semibold h-10 p-3">
+                <FaSearch />
+                Contact Us
+              </button>
+            </div>
+          
+          </div>
+        </div>
+      </div>
     </>
   )
 }
