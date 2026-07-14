@@ -25,7 +25,7 @@ const BrowseRooms = () => {
                 </div>
 
                 <select className="border border-gray-300 rounded-xl p-3">
-                  
+
                   <option>₹ Budget</option>
                   <option>₹3000 - ₹5000</option>
                   <option>₹5000 - ₹8000</option>
@@ -49,138 +49,193 @@ const BrowseRooms = () => {
           </div>
         </header>
 
-         <section className='shadow-2xl p-5 pr-0 flex'>
-          <div className='w-fit p-5 pb-0 shadow-2xl rounded-2xl'>
-            <div className='flex justify-between mb-3 border-b pb-2 border-mist-300'>
-              <h1 className='text-[20px] font-semibold'>Filters</h1>
-              <p className='text-blue-600'>Reset</p>
+        <section className='shadow-2xl p-5 pr-0 flex'>
+
+
+          <div className="w-72 h-fit  bg-white rounded-2xl shadow-md border border-gray-100 overflow-hidden">
+
+            {/* Header */}
+            <div className="flex justify-between items-center p-5 border-b">
+              <h2 className="text-2xl font-bold text-gray-800">
+                Filters
+              </h2>
+
+              <button className="text-blue-600 font-medium hover:underline">
+                Reset
+              </button>
             </div>
 
-            <div>
-              <h1 className='font-bold mb-2'>Location</h1>
-              <div className="flex items-center border border-gray-400 rounded-xl px-3 mb-4">
-                <FaMapMarkerAlt className="text-black" />
+            {/* Location */}
+            <div className="p-5 border-b">
+
+              <h3 className="font-semibold mb-4">
+                Location
+              </h3>
+
+              <div className="border rounded-xl px-3 py-2 flex items-center mb-4">
                 <input
                   type="text"
-                  placeholder="Search Location"
-                  className="w-full p-3 outline-none"
+                  placeholder="Search location"
+                  className="outline-none w-full"
                 />
               </div>
-            </div>
-            <div className='flex flex-col gap-3 border-b border-mist-400'>
-              <div className='flex '>
-                <input type="checkbox" />
-                  <h1 className='ml-2 mr-37'>Pune</h1>
-                  <p>1200+</p>
-              </div>
-              <div className='flex '>
-                <input type="checkbox" />
-                  <h1 className='ml-2 mr-32'>Mumbai</h1>
-                  <p>1500+</p>
-              </div>
-              <div className='flex'>
-                <input type="checkbox" />
-                  <h1 className='ml-2 mr-35'>Nagpur</h1>
-                  <p>800+</p>
-              </div>
-              <div className='flex'>
-                <input type="checkbox" />
-                  <h1 className='ml-2 mr-36'>Nashik</h1>
-                  <p>700+</p>
-              </div>
-              <div className='flex'>
-                <input type="checkbox" />
-                  <h1 className='ml-2 mr-30'>Kolhapur</h1>
-                  <p>1200+</p>
-              </div>
-              <h1 className='mb-5 text-blue-500'>Show More</h1>
-            </div>
-            <div>
-              <div className="mt-3 border-b border-mist-300">
-                <h3 className="text-lg font-semibold mb-3">
-                  Budget (per month)
-                </h3>
 
-                <input
-                  type="range"
-                  min="0"
-                  max="10000"
-                  step="500"
-                  className="w-full accent-blue-600 cursor-pointer"
-                />
-                <div className="flex justify-between text-sm text-gray-600 mt-2">
-                  <span>₹0</span>
-                  <span className='mb-3'>₹10,000+</span>
-                </div>
-              </div>
-            </div>
-            <div className='flex flex-col gap-2 mt-3 border-b pb-5 border-gray-300'>
-              <h1 className='text-lg font-semibold'>Room Type</h1>
-              <div className='flex gap-3'>
-                <input type="checkbox" />
-                <h1>Single Room</h1>
-              </div>
-              <div className='flex gap-3'>
-                <input type="checkbox" />
-                <h1>Shared Room</h1>
-              </div>
-              <div className='flex gap-3'>
-                <input type="checkbox" />
-                <h1>1 BHK</h1>
-              </div>
-              <div className='flex gap-3'>
-                <input type="checkbox" />
-                <h1>2 BHK</h1>
-              </div>
-              <div className='flex gap-3'>
-                <input type="checkbox" />
-                <h1>Studio</h1>
-              </div>
-              <div className='flex gap-3'>
-                <input type="checkbox" />
-                <h1>PG/Hostel</h1>
-              </div>
-            </div>
-            <div className='flex flex-col gap-2 mt-3'>
-              <h1 className='text-lg font-semibold'>Amenities</h1>
-              <div className='flex gap-3'>
-                <input type="checkbox" />
-                <h1>Wi-Fi</h1>
-              </div>
-              <div className='flex gap-3'>
-                <input type="checkbox" />
-                <h1>AC</h1>
-              </div>
-              <div className='flex gap-3'>
-                <input type="checkbox" />
-                <h1>Fan</h1>
-              </div>
-              <div className='flex gap-3'>
-                <input type="checkbox" />
-                <h1>Parking</h1>
-              </div>
-              <div className='flex gap-3'>
-                <input type="checkbox" />
-                <h1>Power Backup</h1>
-              </div>
-              <div className='flex gap-3'>
-                <input type="checkbox" />
-                <h1>Laundry</h1>
-              </div>
-              <div className='flex gap-3'>
-                <input type="checkbox" />
-                <h1>Security Guard</h1>
-              </div>
-              <div className='flex gap-3'>
-                <input type="checkbox" />
-                <h1>Park</h1>
-              </div>
-              <div className='flex gap-3'>
-                <input type="checkbox" />
-                <h1>Club house</h1>
+              <div className="space-y-3">
+
+                <label className="flex justify-between">
+                  <div className="flex gap-2">
+                    <input type="checkbox" defaultChecked />
+                    Pune
+                  </div>
+                  <span className="text-gray-500">1200+</span>
+                </label>
+
+                <label className="flex justify-between">
+                  <div className="flex gap-2">
+                    <input type="checkbox" />
+                    Mumbai
+                  </div>
+                  <span className="text-gray-500">2500+</span>
+                </label>
+
+                <label className="flex justify-between">
+                  <div className="flex gap-2">
+                    <input type="checkbox" />
+                    Nagpur
+                  </div>
+                  <span className="text-gray-500">800+</span>
+                </label>
+
+                <label className="flex justify-between">
+                  <div className="flex gap-2">
+                    <input type="checkbox" />
+                    Nashik
+                  </div>
+                  <span className="text-gray-500">600+</span>
+                </label>
+
+                <label className="flex justify-between">
+                  <div className="flex gap-2">
+                    <input type="checkbox" />
+                    Aurangabad
+                  </div>
+                  <span className="text-gray-500">550+</span>
+                </label>
+
               </div>
 
             </div>
+
+            {/* Budget */}
+
+            <div className="p-5 border-b">
+
+              <h3 className="font-semibold mb-4">
+                Budget (per month)
+              </h3>
+
+              <input
+                type="range"
+                min="0"
+                max="10000"
+                className="w-full accent-blue-600"
+              />
+
+              <div className="flex justify-between mt-3 text-sm">
+                <span>₹0</span>
+                <span>₹10,000+</span>
+              </div>
+
+            </div>
+
+            {/* Room Type */}
+
+            <div className="p-5 border-b">
+
+              <h3 className="font-semibold mb-4">
+                Room Type
+              </h3>
+
+              <div className="space-y-3">
+
+                <label className="flex gap-2">
+                  <input type="checkbox" />
+                  Single Room
+                </label>
+
+                <label className="flex gap-2">
+                  <input type="checkbox" />
+                  Shared Room
+                </label>
+
+                <label className="flex gap-2">
+                  <input type="checkbox" />
+                  1 BHK
+                </label>
+
+                <label className="flex gap-2">
+                  <input type="checkbox" />
+                  2 BHK
+                </label>
+
+                <label className="flex gap-2">
+                  <input type="checkbox" />
+                  Studio
+                </label>
+
+                <label className="flex gap-2">
+                  <input type="checkbox" />
+                  PG / Hostel
+                </label>
+
+              </div>
+
+            </div>
+
+            {/* Amenities */}
+
+            <div className="p-5">
+
+              <h3 className="font-semibold mb-4">
+                Amenities
+              </h3>
+
+              <div className="space-y-3">
+
+                <label className="flex gap-2">
+                  <input type="checkbox" />
+                  Wi-Fi
+                </label>
+
+                <label className="flex gap-2">
+                  <input type="checkbox" />
+                  AC
+                </label>
+
+                <label className="flex gap-2">
+                  <input type="checkbox" />
+                  Parking
+                </label>
+
+                <label className="flex gap-2">
+                  <input type="checkbox" />
+                  Laundry
+                </label>
+
+                <label className="flex gap-2">
+                  <input type="checkbox" />
+                  Kitchen
+                </label>
+
+                <label className="flex gap-2">
+                  <input type="checkbox" />
+                  Power Backup
+                </label>
+
+              </div>
+
+            </div>
+
           </div>
 
           <div >
@@ -766,7 +821,7 @@ const BrowseRooms = () => {
                 </div>
 
               </div>
-              
+
             </div>
           </div>
         </section>
