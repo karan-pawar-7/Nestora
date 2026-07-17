@@ -2,6 +2,8 @@ import { FaSearch, FaMapMarkerAlt } from "react-icons/fa";
 import React from 'react'
 import { useState } from "react";
 
+import ScrollReveal from "../../components/ScrollReveal";
+
 const faqs = [
     {
         question: "How do I book a room?",
@@ -47,11 +49,16 @@ const Home = () => {
                     <div className="max-w-3xl items-center flex flex-col">
 
 
-                        <h1 className=" text-5xl lg:text-6xl font-bold text-white ">
-                            Find Your Perfect Room
+                        <h1
+                            data-aos="fade-down"
+                            className="text-5xl lg:text-6xl font-bold text-white"
+                        >                            Find Your Perfect Room
                         </h1>
-                        <div className="flex flex-col items-center justify-center text-2xl">
-                            <p className=" mt-6 text-white ">
+                        <div
+                            data-aos="fade-up"
+                            data-aos-delay="200"
+                            className="flex flex-col items-center justify-center text-2xl"
+                        >                            <p className=" mt-6 text-white ">
                                 Discover comfortable and affordable rooms
                             </p>
                             <p className=" text-white">near your favorite locations.</p>
@@ -59,8 +66,11 @@ const Home = () => {
 
 
                         {/* Search Box */}
-                        <div className="bg-white rounded-2xl shadow-xl p-4 mt-10 flex items-center justify-center">
-                            <div className="grid md:grid-cols-4 gap-4">
+                        <div
+                            data-aos="zoom-in"
+                            data-aos-delay="400"
+                            className="bg-white rounded-2xl shadow-xl p-4 mt-10 flex items-center justify-center"
+                        >                            <div className="grid md:grid-cols-4 gap-4">
 
                                 <div className="flex items-center border rounded-xl px-3">
                                     <FaMapMarkerAlt className="text-[#113270]" />
@@ -96,8 +106,11 @@ const Home = () => {
                         </div>
 
                         {/* Stats */}
-                        <div className="flex flex-wrap gap-8 mt-10 text-white">
-
+                        <div
+                            data-aos="fade-up"
+                            data-aos-delay="600"
+                            className="flex flex-wrap gap-8 mt-10 text-white"
+                        >
                             <div>
                                 <h2 className="text-3xl font-bold">10K+</h2>
                                 <p>Rooms Listed</p>
@@ -121,12 +134,17 @@ const Home = () => {
 
             <div className=" flex flex-col mt-5">
 
-                <div>
-                    <div className="flex items-center justify-between mx-13 font-bold mt-3">
-                        <h1>Featured Rooms</h1>
-                        <h1 className="text-[#002e82]">View All</h1>
-                    </div>
-                    <div className="flex gap-8 py-5 items-center justify-center">
+
+                <div
+                    data-aos="fade-up"
+                    className="flex items-center justify-between mx-13 font-bold mt-3"
+                >                        <h1>Featured Rooms</h1>
+                    <h1 className="text-[#002e82]">View All</h1>
+                </div>
+
+                <div className="flex gap-8 py-5 items-center justify-center" >
+
+                    <ScrollReveal direction="up" delay={0.3}>
                         <div className=" h-full w-fit shadow-2xl rounded-b-2xl hover:-translate-y-2 hover:shadow-2xl duration-300 group-hover:scale-110">
                             <img className="h-36 w-auto rounded-t-2xl" src={`${import.meta.env.BASE_URL}r1.png`} alt="" />
                             <div className="p-3">
@@ -138,7 +156,10 @@ const Home = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className=" h-full w-fit shadow-2xl rounded-b-2xl hover:-translate-y-2 hover:shadow-2xl duration-300 group-hover:scale-110">
+                    </ScrollReveal>
+
+                    <ScrollReveal direction="up" delay={0.5} >
+                        <div className="h-full w-fit shadow-2xl rounded-b-2xl hover:-translate-y-2 hover:shadow-2xl duration-100 group-hover:scale-110">
                             <img className="h-36 w-auto rounded-t-2xl" src={`${import.meta.env.BASE_URL}r2.png`} alt="" />
                             <div className="p-3">
                                 <h1 className="font-bold">Single Room</h1>
@@ -149,7 +170,11 @@ const Home = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className=" h-full w-fit shadow-2xl rounded-b-2xl hover:-translate-y-2 hover:shadow-2xl duration-300 group-hover:scale-110">
+                    </ScrollReveal>
+
+
+                    <ScrollReveal direction="up" delay={0.7}>
+                        <div className="h-full w-fit shadow-2xl rounded-b-2xl hover:-translate-y-2 hover:shadow-2xl duration-300 group-hover:scale-110" >
                             <img className="h-36 w-auto rounded-t-2xl" src={`${import.meta.env.BASE_URL}r3.png`} alt="" />
                             <div className="p-3">
                                 <h1 className="font-bold">2 BHK Flat</h1>
@@ -160,7 +185,9 @@ const Home = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className=" h-full w-fit shadow-2xl rounded-b-2xl hover:-translate-y-2 hover:shadow-2xl duration-300 group-hover:scale-110">
+                    </ScrollReveal>
+                    <ScrollReveal direction="up" delay={0.9}>
+                        <div className="h-full w-fit shadow-2xl rounded-b-2xl hover:-translate-y-2 hover:shadow-2xl duration-300 group-hover:scale-110">
                             <img className="h-36 w-auto rounded-t-2xl" src={`${import.meta.env.BASE_URL}r4.png`} alt="" />
                             <div className="p-3">
                                 <h1 className="font-bold">1 RK Studio</h1>
@@ -171,7 +198,11 @@ const Home = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className=" h-full w-fit shadow-2xl rounded-b-2xl hover:-translate-y-2 hover:shadow-2xl duration-300 group-hover:scale-110">
+                    </ScrollReveal>
+
+                    <ScrollReveal direction="up" delay={1}>
+                        <div
+                            className="h-full w-fit shadow-2xl rounded-b-2xl hover:-translate-y-2 hover:shadow-2xl duration-300 group-hover:scale-110" >
                             <img className="h-36 w-auto rounded-t-2xl" src={`${import.meta.env.BASE_URL}r5.png`} alt="" />
                             <div className="p-3">
                                 <h1 className="font-bold">Shared Room</h1>
@@ -182,12 +213,16 @@ const Home = () => {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </ScrollReveal>
+
+
                 </div>
-            </div>
+
+
+            </div >
 
             <section className="py-10 bg-white">
-                <div className="container mx-auto px-6">
+                <div className="h-full py-5 w-fit rounded-b-2xl " >
                     <div className="flex justify-between ml-150  items-center  mb-8">
                         <div className="flex flex-col items-center">
                             <h2 className="text-3xl font-bold">Recently Added Rooms</h2>
@@ -204,7 +239,8 @@ const Home = () => {
                     <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-10 mx-5">
 
                         {/* Room Card */}
-                        <div className="bg-white rounded-2xl shadow hover:shadow-xl duration-300 overflow-hidden">
+                        <div className="bg-white rounded-2xl shadow hover:shadow-xl duration-300 overflow-hidden" data-aos="fade-up"
+                            data-aos-delay="200">
                             <img className="h-36 w-auto rounded-t-2xl" src={`${import.meta.env.BASE_URL}r1.png`} />
 
                             <div className="p-5">
@@ -233,7 +269,8 @@ const Home = () => {
                             </div>
                         </div>
 
-                        <div className="bg-white rounded-2xl shadow hover:shadow-xl duration-300 overflow-hidden">
+                        <div  data-aos="fade-up"
+                            data-aos-delay="200" className="bg-white rounded-2xl shadow hover:shadow-xl duration-300 overflow-hidden">
                             <img className="h-36 w-auto rounded-t-2xl" src={`${import.meta.env.BASE_URL}r1.png`} />
 
                             <div className="p-5">
@@ -262,7 +299,8 @@ const Home = () => {
                             </div>
                         </div>
 
-                        <div className="bg-white rounded-2xl shadow hover:shadow-xl duration-300 overflow-hidden">
+                        <div  data-aos="fade-up"
+                            data-aos-delay="200" className="bg-white rounded-2xl shadow hover:shadow-xl duration-300 overflow-hidden">
                             <img className="h-36 w-auto rounded-t-2xl" src={`${import.meta.env.BASE_URL}r1.png`} />
 
                             <div className="p-5">
@@ -291,7 +329,8 @@ const Home = () => {
                             </div>
                         </div>
 
-                        <div className="bg-white rounded-2xl shadow hover:shadow-xl duration-300 overflow-hidden">
+                        <div  data-aos="fade-up"
+                            data-aos-delay="200" className="bg-white rounded-2xl shadow hover:shadow-xl duration-300 overflow-hidden">
                             <img className="h-36 w-auto rounded-t-2xl" src={`${import.meta.env.BASE_URL}r1.png`} />
 
                             <div className="p-5">
@@ -320,7 +359,8 @@ const Home = () => {
                             </div>
                         </div>
 
-                        <div className="bg-white rounded-2xl shadow hover:shadow-xl duration-300 overflow-hidden">
+                        <div  data-aos="fade-up"
+                            data-aos-delay="200" className="bg-white rounded-2xl shadow hover:shadow-xl duration-300 overflow-hidden">
                             <img className="h-36 w-auto rounded-t-2xl" src={`${import.meta.env.BASE_URL}r1.png`} />
 
                             <div className="p-5">
@@ -408,56 +448,56 @@ const Home = () => {
 
             </section>
 
-              <div>
-                    <div className="flex items-center justify-between mx-13 mt-8 font-bold">
-                        <h1>Popular Cities</h1>
-                        <h1 className="text-[#002e82]">View All</h1>
-                    </div>
-                    <div className="flex gap-6 py-5 px-12 justify-center">
-                        <div className=" h-full w-fit shadow-2xl rounded-b-2xl hover:-translate-y-2 hover:shadow-2xl duration-300 group-hover:scale-110">
-                            <img className="h-36 w-auto rounded-t-2xl" src={`${import.meta.env.BASE_URL}c1.png`} />
-                            <div className="p-3">
-                                <h1 className="font-bold">Pune</h1>
-                                <h1>1200+ Rooms</h1>
-                            </div>
-                        </div>
-                        <div className=" h-full w-fit shadow-2xl rounded-b-2xl hover:-translate-y-2 hover:shadow-2xl duration-300 group-hover:scale-110">
-                            <img className="h-36 w-auto rounded-t-2xl" src={`${import.meta.env.BASE_URL}c2.png`} />
-                            <div className="p-3">
-                                <h1 className="font-bold">Mumbai</h1>
-                                <h1>1500+ Rooms</h1>
-                            </div>
-                        </div>
-                        <div className=" h-full w-fit shadow-2xl rounded-b-2xl hover:-translate-y-2 hover:shadow-2xl duration-300 group-hover:scale-110">
-                            <img className="h-36 w-auto rounded-t-2xl" src={`${import.meta.env.BASE_URL}c3.png`} />
-                            <div className="p-3">
-                                <h1 className="font-bold">Nagpur</h1>
-                                <h1>1000+ Rooms</h1>
-                            </div>
-                        </div>
-                        <div className=" h-full w-fit shadow-2xl rounded-b-2xl hover:-translate-y-2 hover:shadow-2xl duration-300 group-hover:scale-110">
-                            <img className="h-36 w-auto rounded-t-2xl" src={`${import.meta.env.BASE_URL}c4.png`} />
-                            <div className="p-3">
-                                <h1 className="font-bold">Nashik</h1>
-                                <h1>850+ Rooms</h1>
-                            </div>
-                        </div>
-                        <div className=" h-full w-fit shadow-2xl rounded-b-2xl hover:-translate-y-2 hover:shadow-2xl duration-300 group-hover:scale-110">
-                            <img className="h-36 w-auto rounded-t-2xl" src={`${import.meta.env.BASE_URL}c5.png`} />
-                            <div className="p-3">
-                                <h1 className="font-bold">Agra</h1>
-                                <h1>500+ Rooms</h1>
-                            </div>
-                        </div>
-                        <div className=" h-full w-fit shadow-2xl rounded-b-2xl hover:-translate-y-2 hover:shadow-2xl duration-300 group-hover:scale-110">
-                            <img className="h-36 w-auto rounded-t-2xl" src={`${import.meta.env.BASE_URL}c6.png`} />
-                            <div className="p-3">
-                                <h1 className="font-bold">Kolhpura</h1>
-                                <h1>400+ Rooms</h1>
-                            </div>
+            <div>
+                <div className="flex items-center justify-between mx-13 mt-8 font-bold">
+                    <h1>Popular Cities</h1>
+                    <h1 className="text-[#002e82]">View All</h1>
+                </div>
+                <div className="flex gap-6 py-5 px-12 justify-center">
+                    <div className=" h-full w-fit shadow-2xl rounded-b-2xl hover:-translate-y-2 hover:shadow-2xl duration-300 group-hover:scale-110">
+                        <img className="h-36 w-auto rounded-t-2xl" src={`${import.meta.env.BASE_URL}c1.png`} />
+                        <div className="p-3">
+                            <h1 className="font-bold">Pune</h1>
+                            <h1>1200+ Rooms</h1>
                         </div>
                     </div>
-                </div>   
+                    <div className=" h-full w-fit shadow-2xl rounded-b-2xl hover:-translate-y-2 hover:shadow-2xl duration-300 group-hover:scale-110">
+                        <img className="h-36 w-auto rounded-t-2xl" src={`${import.meta.env.BASE_URL}c2.png`} />
+                        <div className="p-3">
+                            <h1 className="font-bold">Mumbai</h1>
+                            <h1>1500+ Rooms</h1>
+                        </div>
+                    </div>
+                    <div className=" h-full w-fit shadow-2xl rounded-b-2xl hover:-translate-y-2 hover:shadow-2xl duration-300 group-hover:scale-110">
+                        <img className="h-36 w-auto rounded-t-2xl" src={`${import.meta.env.BASE_URL}c3.png`} />
+                        <div className="p-3">
+                            <h1 className="font-bold">Nagpur</h1>
+                            <h1>1000+ Rooms</h1>
+                        </div>
+                    </div>
+                    <div className=" h-full w-fit shadow-2xl rounded-b-2xl hover:-translate-y-2 hover:shadow-2xl duration-300 group-hover:scale-110">
+                        <img className="h-36 w-auto rounded-t-2xl" src={`${import.meta.env.BASE_URL}c4.png`} />
+                        <div className="p-3">
+                            <h1 className="font-bold">Nashik</h1>
+                            <h1>850+ Rooms</h1>
+                        </div>
+                    </div>
+                    <div className=" h-full w-fit shadow-2xl rounded-b-2xl hover:-translate-y-2 hover:shadow-2xl duration-300 group-hover:scale-110">
+                        <img className="h-36 w-auto rounded-t-2xl" src={`${import.meta.env.BASE_URL}c5.png`} />
+                        <div className="p-3">
+                            <h1 className="font-bold">Agra</h1>
+                            <h1>500+ Rooms</h1>
+                        </div>
+                    </div>
+                    <div className=" h-full w-fit shadow-2xl rounded-b-2xl hover:-translate-y-2 hover:shadow-2xl duration-300 group-hover:scale-110">
+                        <img className="h-36 w-auto rounded-t-2xl" src={`${import.meta.env.BASE_URL}c6.png`} />
+                        <div className="p-3">
+                            <h1 className="font-bold">Kolhpura</h1>
+                            <h1>400+ Rooms</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <section className="py-10 bg-gray-50">
                 <div className="max-w-4xl mx-auto px-6">

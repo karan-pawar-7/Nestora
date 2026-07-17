@@ -28,8 +28,31 @@ import Photos from "./pages/OwnerDashboard/PostRoom/Photos";
 import PriceAvailability from "./pages/OwnerDashboard/PostRoom/PriceAvailability";
 import Amenities from "./pages/OwnerDashboard/PostRoom/Amenities";
 import ReviewPublish from "./pages/OwnerDashboard/PostRoom/ReviewPublish";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+
+import RoomDetails from "./pages/RoomDetails/RoomDetails";
+
+import UserLayout from "./layouts/UserLayout";
+
+import UserDashboard from "./pages/UserDashboard/Dashboard";
+import MyBookings from "./pages/UserDashboard/MyBookings";
+// import SavedRooms from "./pages/UserDashboard/SavedRooms";
+// import UserMessages from "./pages/UserDashboard/Messages";
+// import UserProfile from "./pages/UserDashboard/Profile";
+// import UserSettings from "./pages/UserDashboard/Settings";
 
 function App() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+      offset: 100,
+      easing: "ease-in-out",
+    });
+  }, []);
 
   const location = useLocation();
 
@@ -86,10 +109,34 @@ function App() {
             path="post-room/review"
             element={<ReviewPublish />}
           />
+
         </Route>
+
+        <Route path="/room/:id" element={<RoomDetails />} />
+
+
+        {/* User Dashboard */}
+
+        <Route path="/user" element={<UserLayout />}>
+
+          <Route index element={<UserDashboard />} />
+
+          <Route path="bookings" element={<MyBookings />} />
+
+          {/* <Route path="saved" element={<SavedRooms />} />
+
+          <Route path="messages" element={<UserMessages />} />
+
+          <Route path="profile" element={<UserProfile />} />
+
+          <Route path="settings" element={<UserSettings />} /> */}
+
+        </Route>
+
       </Routes>
     </>
   );
 }
+
 
 export default App;
