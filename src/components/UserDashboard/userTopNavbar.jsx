@@ -1,7 +1,8 @@
 import React from "react";
 import { FaBell, FaSearch } from "react-icons/fa";
 
-export default function TopNavbar() {
+
+export default function userTopNavbar() {
   return (
     <div className="bg-white h-20 shadow-sm px-8 flex items-center justify-between">
 

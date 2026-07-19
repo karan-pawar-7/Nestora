@@ -37,12 +37,12 @@ import RoomDetails from "./pages/RoomDetails/RoomDetails";
 
 import UserLayout from "./layouts/UserLayout";
 
-import UserDashboard from "./pages/UserDashboard/Dashboard";
+import UserDashboard from "./pages/UserDashboard/UserDashboard";
 import MyBookings from "./pages/UserDashboard/MyBookings";
-// import SavedRooms from "./pages/UserDashboard/SavedRooms";
-// import UserMessages from "./pages/UserDashboard/Messages";
-// import UserProfile from "./pages/UserDashboard/Profile";
-// import UserSettings from "./pages/UserDashboard/Settings";
+import UserMessages from './pages/UserDashboard/UserMessages';
+import UserProfile from "./pages/UserDashboard/UserProfile";
+import UserSettings from "./pages/UserDashboard/UserSettings";
+import UserWishlist from "./pages/UserDashboard/UserWishlist";
 
 function App() {
   useEffect(() => {
@@ -56,12 +56,11 @@ function App() {
 
   const location = useLocation();
 
-  const hideNavbar = location.pathname.startsWith("/dashboard");
 
   return (
     <>
       {/* Public Navbar */}
-      {!hideNavbar && <Navbar />}
+      <Navbar />
       <Routes>
         {/* Public Pages */}
         <Route path="/" element={<Home />} />
@@ -80,36 +79,15 @@ function App() {
           <Route path="inquiries" element={<Inquiries />} />
           <Route path="messages" element={<Messages />} />
           <Route path="earnings" element={<Earnings />} />
-
           <Route path="profile" element={<Profile />} />
-
           <Route path="settings" element={<Settings />} />
-
           <Route path="help" element={<HelpSupport />} />
 
-
-          {/* Post Room */}
-          <Route
-            path="post-room/basic-details"
-            element={<BasicDetails />}
-          />
-          <Route
-            path="post-room/photos"
-            element={<Photos />}
-          />
-          <Route
-            path="post-room/price"
-            element={<PriceAvailability />}
-          />
-          <Route
-            path="post-room/amenities"
-            element={<Amenities />}
-          />
-          <Route
-            path="post-room/review"
-            element={<ReviewPublish />}
-          />
-
+          <Route path="post-room/basic-details" element={<BasicDetails />} />
+          <Route path="post-room/photos" element={<Photos />} />
+          <Route path="post-room/price" element={<PriceAvailability />} />
+          <Route path="post-room/amenities" element={<Amenities />} />
+          <Route path="post-room/review" element={<ReviewPublish />} />
         </Route>
 
         <Route path="/room/:id" element={<RoomDetails />} />
@@ -117,21 +95,18 @@ function App() {
 
         {/* User Dashboard */}
 
-        <Route path="/user" element={<UserLayout />}>
+        <Route path="/userdashboard" element={<UserLayout />}>
 
           <Route index element={<UserDashboard />} />
-
-          <Route path="bookings" element={<MyBookings />} />
-
-          {/* <Route path="saved" element={<SavedRooms />} />
-
+          <Route path="mybookings" element={<MyBookings />} />
+          {/* <Route path="saved" element={<SavedRooms />} /> */}
+          <Route path="wishlist" element={<UserWishlist />} />
           <Route path="messages" element={<UserMessages />} />
-
           <Route path="profile" element={<UserProfile />} />
-
-          <Route path="settings" element={<UserSettings />} /> */}
+          <Route path="settings" element={<UserSettings />} />
 
         </Route>
+
 
       </Routes>
     </>

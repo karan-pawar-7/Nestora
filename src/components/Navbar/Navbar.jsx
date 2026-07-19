@@ -33,10 +33,9 @@ const Navbar = () => {
               <NavLink
                 to={item.path}
                 className={({ isActive }) =>
-                  `font-medium transition duration-300 ${
-                    isActive
-                      ? "text-[#0c2452] font-bold"
-                      : "text-gray-700 hover:text-blue-600 font-bold"
+                  `font-medium transition duration-300 ${isActive
+                    ? "text-[#0c2452] font-bold"
+                    : "text-gray-700 hover:text-blue-600 font-bold"
                   }`
                 }
               >
@@ -55,17 +54,23 @@ const Navbar = () => {
             Login
           </NavLink>
 
+
           <NavLink
             to="/signup"
             className="px-5 py-2 rounded-xl bg-[#002e82] text-white hover:bg-blue-700 transition"
           >
             Sign Up
           </NavLink>
-           <NavLink
+
+          <NavLink
             to="/Dashboard"
             className="px-5 py-2 rounded-xl bg-[#002e82] text-white hover:bg-blue-700 transition"
           >
             Dashboard
+          </NavLink>
+
+          <NavLink to="/userdashboard" className="px-5 py-2 rounded-xl bg-[#002e82] text-white hover:bg-blue-700 transition">
+            UserDashboard
           </NavLink>
 
           <NavLink

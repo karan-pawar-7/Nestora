@@ -8,7 +8,7 @@ import {
 } from "react-icons/fa";
 
 
-export default function Messages() {
+export default function userMessages() {
 
 
     const [message, setMessage] = useState("");

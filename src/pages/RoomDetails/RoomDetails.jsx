@@ -20,6 +20,15 @@ export default function RoomDetails() {
   const { id } = useParams();
 
   const room = rooms.find((item) => item.id === Number(id));
+  if (!room) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <h1 className="text-3xl font-bold text-red-600">
+          Room Not Found
+        </h1>
+      </div>
+    );
+  }
   return (
     <div className="bg-slate-100 min-h-screen py-10">
 
