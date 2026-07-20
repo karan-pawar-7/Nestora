@@ -100,10 +100,10 @@ function App() {
           <Route index element={<UserDashboard />} />
           <Route path="mybookings" element={<MyBookings />} />
           {/* <Route path="saved" element={<SavedRooms />} /> */}
-          <Route path="wishlist" element={<UserWishlist />} />
-          <Route path="messages" element={<UserMessages />} />
-          <Route path="profile" element={<UserProfile />} />
-          <Route path="settings" element={<UserSettings />} />
+          <Route path="userwishlist" element={<UserWishlist />} />
+          <Route path="usermessages" element={<UserMessages />} />
+          <Route path="userprofile" element={<UserProfile />} />
+          <Route path="usersettings" element={<UserSettings />} />
 
         </Route>
 

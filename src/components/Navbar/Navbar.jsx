@@ -15,13 +15,11 @@ const Navbar = () => {
 
   return (
     <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-md shadow-sm">
-      <nav className="max-w-7xl py-4 mx-auto flex  items-center justify-between">
-
+      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
         {/* Logo */}
         <NavLink
           to="/"
-          className="flex items-center gap-2 text-3xl font-bold text-[#002e82]"
-        >
+          className="flex items-center gap-2 text-2xl md:text-3xl text-blue-900"        >
           <FaHome />
           <span>Nestora</span>
         </NavLink>
@@ -34,7 +32,7 @@ const Navbar = () => {
                 to={item.path}
                 className={({ isActive }) =>
                   `font-medium transition duration-300 ${isActive
-                    ? "text-[#0c2452] font-bold"
+                    ? "text-[#1e5ccf] font-bold"
                     : "text-gray-700 hover:text-blue-600 font-bold"
                   }`
                 }
@@ -74,7 +72,7 @@ const Navbar = () => {
           </NavLink>
 
           <NavLink
-            to="/add-room"
+            to="/dashboard/post-room/basic-details"
             className="px-5 py-2 rounded-xl border border-[#002e82] text-[#002e82] hover:bg-blue-600 hover:text-white transition"
           >
             Post Room
@@ -92,7 +90,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="lg:hidden bg-white shadow-lg">
+        <div className="lg:hidden bg-white shadow-lg transition-all duration-300">
           <div className="flex flex-col p-6 gap-5">
 
             {navLinks.map((item) => (
@@ -107,7 +105,7 @@ const Navbar = () => {
             ))}
 
             <NavLink
-              to="/Login"
+              to="/login"
               className=" text-black text-center py-3 rounded-xl active:text-[#002e82]"
             >
               Login
@@ -118,13 +116,6 @@ const Navbar = () => {
               className="bg-[#002e82] text-white text-center py-3 rounded-xl"
             >
               Sign Up
-            </NavLink>
-
-            <NavLink
-              to="/add-room"
-              className="border border-[#002e82] text-[#002e82] text-center py-3 rounded-xl"
-            >
-              Post Room
             </NavLink>
 
           </div>
